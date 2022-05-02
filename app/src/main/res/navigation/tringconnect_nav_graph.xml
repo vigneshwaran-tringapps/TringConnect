@@ -22,6 +22,6 @@
         android:label="SharedPostFragment" />
     <fragment
         android:id="@+id/folderFragment"
-        android:name="com.example.tringconnect.ui.folderFragment"
+        android:name="com.example.tringconnect.ui.FolderFragment"
         android:label="folderFragment" />
 </navigation>

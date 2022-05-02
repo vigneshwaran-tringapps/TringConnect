@@ -14,7 +14,7 @@ import com.example.tringconnect.adapters.CourseAdapter
 import com.example.tringconnect.adapters.PostAdapter
 import com.example.tringconnect.models.Course
 import com.example.tringconnect.models.Users
-import com.example.tringconnect.models.blogPost
+import com.example.tringconnect.models.BlogPost
 
 
 class SharedPostFragment:Fragment() {
@@ -38,11 +38,11 @@ class SharedPostFragment:Fragment() {
     }
     private fun addDataSet(){
 
-        val list = ArrayList<blogPost>()
-        var user_list = ArrayList<Users>()
-        var cousre_list = ArrayList<Course>()
+        val list = ArrayList<BlogPost>()
+        var userList = ArrayList<Users>()
+        var cousreList = ArrayList<Course>()
         list.add(
-            blogPost(
+            BlogPost(
                 1,
                 "John Mathis",
                 "Product delivery manager",
@@ -53,7 +53,7 @@ class SharedPostFragment:Fragment() {
             )
         )
         list.add(
-            blogPost(
+            BlogPost(
                 2,
                 "Joel Rhodes",
                 "Director marketing sales",
@@ -65,7 +65,7 @@ class SharedPostFragment:Fragment() {
         )
 
         list.add(
-            blogPost(
+            BlogPost(
                 3,
                 "Landon Murray",
                 "Creative Director",
@@ -77,7 +77,7 @@ class SharedPostFragment:Fragment() {
         )
 
         list.add(
-            blogPost(
+            BlogPost(
                 4,
                 "Tringapps",
                 "Management",
@@ -87,55 +87,55 @@ class SharedPostFragment:Fragment() {
                 R.drawable.banner
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask,
             "HR Team"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask1,
                 "Creative Bees"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask3,
                 "TechmMads"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask1,
                 "Cloud 9"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask3,
                 "Mr Beast"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask,
                 "Yes Theory"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask3,
                 "Unibeacon"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask3,
                 "Xmen"
             )
         )
-        user_list.add(
+        userList.add(
             Users(
                 R.drawable.image_mask3,
                 "BatCave"
@@ -143,41 +143,41 @@ class SharedPostFragment:Fragment() {
         )
 
 
-        cousre_list.add(
+        cousreList.add(
             Course(
                 R.drawable.course1,
                 "AWS Dynamo DB"
             )
         )
-        cousre_list.add(
+        cousreList.add(
             Course(
                 R.drawable.course2,
                 "Portfolio Management"
             )
         )
-        userAdapter.submitList(user_list)
+        userAdapter.submitList(userList)
         blogAdapter.submitList(list)
     }
 
     private fun initRecyclerView(view: View){
-        val recycler_view = view.findViewById<RecyclerView>(R.id.recyclerview)
-        val recycler_view_hor = view.findViewById<RecyclerView>(R.id.usersList)
-        val recycler_view_hor_course = view.findViewById<RecyclerView>(R.id.courseList)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview)
+        val recyclerViewHor = view.findViewById<RecyclerView>(R.id.usersList)
+        val recyclerViewHorCourse = view.findViewById<RecyclerView>(R.id.courseList)
 
         userAdapter = ActiveUserAdapter()
         blogAdapter = PostAdapter()
         courseAdapter = CourseAdapter()
 
-        recycler_view_hor.apply {
+        recyclerViewHor.apply {
             adapter = userAdapter
             layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)
         }
-        recycler_view.apply {
+        recyclerView.apply {
 
             adapter = blogAdapter
             layoutManager = LinearLayoutManager(activity)
         }
-        recycler_view_hor_course.apply {
+        recyclerViewHorCourse.apply {
 
             adapter = courseAdapter
             layoutManager = LinearLayoutManager(activity,RecyclerView.HORIZONTAL,false)

@@ -3,15 +3,10 @@ package com.example.tringconnect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
+
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
+
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.tringconnect.adapters.PostAdapter
-import com.example.tringconnect.models.blogPost
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class TringConnect : AppCompatActivity() {

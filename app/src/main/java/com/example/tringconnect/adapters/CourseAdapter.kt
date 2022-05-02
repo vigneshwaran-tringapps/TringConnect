@@ -53,11 +53,11 @@ class CourseAdapter: RecyclerView.Adapter<CourseAdapter.CourseViewHolder>(){
                 .error(R.drawable.ic_launcher_background)
 
 
-            course_name.setText(user.user_name)
+            course_name.setText(user.userName)
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(user.user_img)
+                .load(user.userImg)
                 .into(course_img)
         }
 

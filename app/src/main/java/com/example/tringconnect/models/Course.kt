@@ -1,6 +1,6 @@
 package com.example.tringconnect.models
 
 data class Course(
-    var course_img:Number,
-    var course_title:String
+    var courseImg:Number,
+    var courseTitle:String
 )

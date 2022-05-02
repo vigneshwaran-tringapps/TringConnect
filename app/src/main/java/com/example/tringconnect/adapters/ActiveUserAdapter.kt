@@ -53,11 +53,11 @@ class ActiveUserAdapter: RecyclerView.Adapter<ActiveUserAdapter.UserViewHolder>(
                 .error(R.drawable.ic_launcher_background)
 
 
-            user_name.setText(user.user_name)
+            user_name.setText(user.userName)
 
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(user.user_img)
+                .load(user.userImg)
                 .into(user_img)
         }
 

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.tringconnect.R
-import com.example.tringconnect.models.blogPost
+import com.example.tringconnect.models.BlogPost
 import de.hdodenhof.circleimageview.CircleImageView
 
 
@@ -17,7 +17,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.BlogViewHolder>(){
 
 
 
-    private var items: List<blogPost> = ArrayList()
+    private var items: List<BlogPost> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlogViewHolder {
         return BlogViewHolder(
@@ -39,7 +39,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.BlogViewHolder>(){
         return items.size
     }
 
-    fun submitList(blogList: List<blogPost>){
+    fun submitList(blogList: List<BlogPost>){
         items = blogList
     }
     class BlogViewHolder
@@ -56,7 +56,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.BlogViewHolder>(){
 //        val post_like = itemView.findViewById<TextView>(R.id.likeCount)
 //        val post_comment = itemView.findViewById<TextView>(R.id.commentCount)
 
-        fun bind(blogPost: blogPost){
+        fun bind(BlogPost: BlogPost){
 
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.ic_launcher_background)
@@ -68,18 +68,18 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.BlogViewHolder>(){
 //                .into(blog_image)
 //            blog_title.setText(blogPost.title)
 //            blog_author.setText(blogPost.username)
-            author_name.setText(blogPost.postauthor)
-            author_desc.setText(blogPost.authordesignation)
+            author_name.setText(BlogPost.postauthor)
+            author_desc.setText(BlogPost.authordesignation)
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(blogPost.authorImage)
+                .load(BlogPost.authorImage)
                 .into(author_img)
-            post_title.setText(blogPost.postTitle)
+            post_title.setText(BlogPost.postTitle)
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(blogPost.postImage)
+                .load(BlogPost.postImage)
                 .into(post_img)
-            post_tags.setText(blogPost.postTags)
+            post_tags.setText(BlogPost.postTags)
 
 
         }
