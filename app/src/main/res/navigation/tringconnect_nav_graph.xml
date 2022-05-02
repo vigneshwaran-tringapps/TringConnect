@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tringconnect_nav_graph"
+    app:startDestination="@+id/sharedPostFragment">
+
+    <fragment
+        android:id="@+id/createViewFragment"
+        android:name="com.example.tringconnect.ui.CreateViewFragment"
+        android:label="CreateViewFragment" />
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.example.tringconnect.ui.CalenderFragment"
+        android:label="CalenderFragment" />
+    <fragment
+        android:id="@+id/chatViewFragment"
+        android:name="com.example.tringconnect.ui.ChatViewFragment"
+        android:label="ChatViewFragment" />
+    <fragment
+        android:id="@+id/sharedPostFragment"
+        android:name="com.example.tringconnect.ui.SharedPostFragment"
+        android:label="SharedPostFragment" />
+    <fragment
+        android:id="@+id/folderFragment"
+        android:name="com.example.tringconnect.ui.folderFragment"
+        android:label="folderFragment" />
+</navigation>
